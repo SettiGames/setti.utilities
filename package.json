@@ -1,0 +1,21 @@
+{
+  "name": "setti.utilities",
+  "version": "1.0.0",
+  "description": "Collection of typed node helpers used in Setti projects",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SettiGames/setti.utilities.git"
+  },
+  "author": "Chase McClure",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SettiGames/setti.utilities/issues"
+  },
+  "homepage": "https://github.com/SettiGames/setti.utilities#readme",
+  "dependencies": {
+    "winston": "^2.4.0",
+    "winston-papertrail": "^1.0.5"
+  }
+}
