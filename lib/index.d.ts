@@ -1,13 +1,16 @@
-export function error(type: error.Generic | error.Client | error.Server | error.Database | error.Auth | error.Form, raw?: any): error.Definition
+export function error(type: error.Generic | error.Client | error.Server | error.Database | error.Auth | error.Form | error.RB, raw?: any): error.Definition
 
 export namespace error {
 
     export interface Definition {
         status: StatusCode
-        type: Type
-        message: string
-        input?: string
-        raw?: any
+        response: {
+            status: StatusCode
+            type: Type
+            message: string
+            input?: string
+            raw?: any
+        }
     }
 
     export const enum StatusCode {
@@ -56,7 +59,9 @@ export namespace error {
     const enum Auth {
         invalidToken = 'invalidAuthToken',
         missingToken = 'missingAuthToken',
-        missingUser = 'missingUser'
+        missingUser = 'missingUser',
+        signInFailed = 'signInFailed',
+        registrationFailed = 'registrationFailed'
     }
 
     const enum Form {
@@ -69,6 +74,10 @@ export namespace error {
         invalidEmail = 'invalidEmail',
         invalidPassword = 'invalidPassword',
         valueTaken = 'valueTaken'
+    }
+
+    const enum RB {
+        invalidGameInput = 'rbInvalidGameInput'
     }
 
 }
