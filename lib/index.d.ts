@@ -46,6 +46,7 @@ export namespace error {
     }
 
     const enum Server {
+        missingSecret = 'missingSocketSecret',
         invalidSecret = 'invalidSocketSecret',
         noServers = 'noSocketServers',
         hubActionFailed = 'hubActionFailed'
