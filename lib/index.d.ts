@@ -89,9 +89,9 @@ export namespace logger {
 
     export interface Configuration {
         appName: string
-        file: string
-        papertrailHost: string
-        papertrailPort: number
+        file?: string
+        papertrailHost?: string
+        papertrailPort?: number
     }
 
     export function configure(a: Configuration): void
